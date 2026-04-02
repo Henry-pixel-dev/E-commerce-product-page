@@ -15,5 +15,11 @@
   --color-white: hsl(0, 0%, 100%);
   --color-black-overlay: hsl(0, 0%, 0% / 0.75);
 
+  --background-image-hero: url('/images/image-product-1.jpg');
+  --background-image-hero2: url('/images/image-product-2.jpg');       
+  --background-image-hero3: url('/images/image-product-3.jpg');
+  
+  --background-image-thumbnail1: url('/images/image-product-1-thumbnail.jpg');
+  --background-image-thumbnail2: url('/images/image-product-2-thumbnail.jpg');
+  --background-image-thumbnail3: url('/images/image-product-3-thumbnail.jpg');
 }
-
