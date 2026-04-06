@@ -16,35 +16,35 @@
 </head>
 <body class="font-kumbh-sans bg-pale-orange">
 
-  <div class="hidden fixed inset-0 bg-black/75  z-25 ">
+  <div id="lightBox" class="hidden fixed inset-0 bg-black/75  z-25 ">
     <div class="h-full flex flex-col items-center justify-center">
       <div class="relative  py-6  flex flex-col items-center gap-4 rounded-lg ">
-        <button type="button" class="absolute top-0 right-0" aria-label="Close modal">
+        <button id="closeLightBox" type="button" class="absolute top-0 right-0" aria-label="Close modal">
           <img src="images/icon-close.svg" alt="" class="w-4 h-4">
         </button>
         <div class="relative p-4  rounded-lg">
-          <img src="images/image-product-1.jpg" alt="" class="w-128 h-128 object-cover rounded-lg z-10">
+          <img id="lightBoxImage" src="images/image-product-1.jpg" alt="" class="w-128 h-128 object-cover rounded-lg z-10">
 
-          <button class="absolute top-1/2 left-0 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer  z-24" aria-label="Previous image">
+          <button id="lightPreviouBtn" class="absolute top-1/2 left-0 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer  z-24" aria-label="Previous image">
           <img src="images/icon-previous.svg" alt="Previous Icon" class="cursor-pointer">
         </button>
 
-        <button class="absolute top-1/2 right-0 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer  z-24" aria-label="Next image">
+        <button id="lightNextBtn" class="absolute top-1/2 right-0 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer  z-24" aria-label="Next image">
           <img src="images/icon-next.svg" alt="Next Icon" class="cursor-pointer">
         </button>
         </div>
 
         <div class="flex flex-row justify-center items-center space-x-4">
-          <img src="images/image-product-1-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer border-2 border-orange-300 hover:opacity-50">
-          <img src="images/image-product-2-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
-          <img src="images/image-product-3-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
-          <img src="images/image-product-4-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+          <img id="lightProduct1" src="images/image-product-1-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer border-2 border-orange-300 hover:opacity-50">
+          <img id="lightProduct2" src="images/image-product-2-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+          <img id="lightProduct3" src="images/image-product-3-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+          <img id="lightProduct4" src="images/image-product-4-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
         </div>
       </div>
     </div>
 
   </div>
-  <header class="container flex flex-row justify-between w-full p-4 py-8 h-20 items-center">
+  <header class="md:mx-auto flex flex-row justify-between w-full p-4 py-8 h-20 items-center">
     <div class="flex flex-row items-center gap-4  h-20">
       <img id="menuBar" src="images/icon-menu.svg" alt="Menu Icon" class="cursor-pointer md:hidden">
       <img src="images/logo.svg" alt="Sneaker Company Logo">
@@ -76,31 +76,31 @@
     </div>
   </nav>
 
-  <main class="min-h-screen flex flex-col  md:flex-row md:justify-between  md:w-full md:max-w-6xl md:mx-auto md:container md:gap-12 md:items-center md:-mt-10 md:relative">
+  <main class="min-h-screen flex flex-col  md:flex-row md:justify-between  md:w-full md:max-w-6xl md:mx-auto md:container md:gap-12 md:items-center  md:relative">
     <div class="flex flex-col space-y-3">
-      <div class="bg-hero bg-cover bg-center w-full h-64   relative md:rounded-lg md:min-h-120 md:min-w-[375px] md:static">
+      <div id="hero" class="bg-hero bg-cover bg-center w-full h-64   relative md:rounded-lg md:min-h-120 md:min-w-[375px] md:static md:cursor-pointer">
         <button id="previousBtn" class="absolute top-1/2 left-4 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer md:hidden">
           <img src="images/icon-previous.svg" alt="Previous Icon" class="cursor-pointer">
         </button>
         <button id="nextBtn" class="absolute top-1/2 right-4 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer md:hidden">
           <img src="images/icon-next.svg" alt="Next Icon" class="cursor-pointer">
         </button>
-        <div class="hidden bg-pale-orange absolute top-2 left-2 right-2 bottom-4   rounded-lg md:left-auto md:bottom-auto md:top-10 md:right-4 md:max-w-[352px] md:max-h-[232px] md:shadow-lg">
+        <div id="cartDisplay" class="hidden bg-pale-orange absolute top-2 left-2 right-2 bottom-4   rounded-lg md:left-auto md:bottom-auto md:top-10 md:right-4 md:max-w-[352px] md:max-h-[232px] md:shadow-lg">
           <p class="w-full shadow p-6">
             Cart
           </p>
-          <div class="p-6 flex flex-row justitfy-between items-center space-x-6">
-            <img src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" class="w-12 h-12 rounded-lg">
+          <div id="cartMenu" class="p-6 flex flex-row justitfy-between items-center space-x-6">
+            <img id="cartImage" src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" class="w-12 h-12 rounded-lg">
             <div class="flex flex-col gap-1">
               <p class="text-sm text-dark-grayish-blue">Fall Limited Edition Sneakers</p>
               <p class="text-sm text-dark-grayish-blue"><span class="font-bold text-very-grayish-blue">$125.00</span> x 3 <span class="font-bold text-very-dark-blue ">$250.00</span></p>
             </div>
-            <button aria-label="Remove item from cart">
+            <button id="cartDeleteBtn"aria-label="Remove item from cart">
               <img src="images/icon-delete.svg" alt="Delete Icon" class="w-4 h-4 cursor-pointer">
             </button>
           </div>
           <div class="px-6">
-            <button class="w-full bg-orange text-white font-bold py-2 rounded-lg">
+            <button id="checkoutBtn" class="w-full bg-orange text-white font-bold py-2 rounded-lg">
               Checkout
             </button>
           </div>
@@ -110,10 +110,10 @@
       </div>
 
       <div class="hidden md:flex md:flex-row md:justify-between ">
-        <img src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer border-2 border-orange-300 hover:opacity-50">
-        <img src="images/image-product-2-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
-        <img src="images/image-product-3-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
-        <img src="images/image-product-4-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+        <img id="Product-1" src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer border-2 border-orange-300 hover:opacity-50">
+        <img id="product-2" src="images/image-product-2-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+        <img id="product-3" src="images/image-product-3-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
+        <img id="product-4" src="images/image-product-4-thumbnail.jpg" alt="Product Thumbnail" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
       </div>
     </div>
 
@@ -136,21 +136,21 @@
 
       <div class="relative w-full bg-light-grayish-blue rounded-lg flex flex-row justify-center items-center p-4">
 
-        <button class="absolute  left-5" aria-label="Decrease quantity">
+        <button id="minusBtn" class="absolute  left-5" aria-label="Decrease quantity">
           <img src="images/icon-minus.svg" alt="" class="cursor-pointer hover:opacity-50">
         </button>
 
-        <div class="text-base font-bold">
+        <div id="calDisplay" class="text-base font-bold">
           0
         </div>
 
-        <button class="absolute  right-5" aria-label="Increase quantity">
+        <button id="plusBtn" class="absolute  right-5" aria-label="Increase quantity">
           <img src="images/icon-plus.svg" alt="" class="cursor-pointer hover:opacity-50">
         </button>
       </div>
 
       <div class="relative w-full items-center justify-center cursor-pointer">
-        <button type="submit" class="bg-orange p-4 rounded-lg w-full font-bold hover:opacity-50 cursor-pointer">Add to cart</button>
+        <button id="addToCartBtn" type="submit" class="bg-orange p-4 rounded-lg w-full font-bold hover:opacity-50 cursor-pointer">Add to cart</button>
         <div class="absolute left-15 top-1/2 transform -translate-y-1/2">
           <img src="images/icon-cart.svg" alt="Cart Icon">
         </div>
