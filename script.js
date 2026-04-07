@@ -27,6 +27,10 @@ const plusBtn = document.querySelector('#plusBtn');
 const calDisplay = document.querySelector('#calDisplay');
 const addToCartBtn = document.querySelector('#addToCartBtn');
 const cartMenu = document.querySelector('#cartMenu');
+const currentPriceDisplay = document.querySelector('#currentPriceDisplay');
+const calDisplay2 = document.querySelector('#calDisplay2');
+const cart = document.querySelector('#cart');
+
 
 let currentIndex = 1;
 let currentLightBoxIndex = 1;
@@ -238,15 +242,40 @@ function hideCart() {
     checkoutBtn.style.display = "none";
 }
 
+function sumDisplay() {
+ let currentPrice = 125.00 * cartQuantity;
+ currentPriceDisplay.textContent = `$${currentPrice.toFixed(2)}`;
+ calDisplay2.textContent = cartQuantity;
+}
+
 
 addToCartBtn.addEventListener('click', (e) => {
     e.preventDefault();
     cartDisplay.classList.toggle('hidden');
     if (cartQuantity > 0) {
         showCart();
+        sumDisplay();
+        cartMenu.style.display = "flex";
+        checkoutBtn.style.display = "block";
+    } else {
+        return;
+    }
+})
+
+cart.addEventListener('click', () => {
+    cartDisplay.classList.toggle('hidden');
+    if (cartQuantity > 0) {
+        showCart();
+        sumDisplay();
         cartMenu.style.display = "flex";
         checkoutBtn.style.display = "block";
     } else {
         hideCart();
-    }
+    } 
+})
+
+cartDeleteBtn.addEventListener('click', () => {
+    cartQuantity = 0;
+    calDisplay.textContent = cartQuantity;
+    hideCart();
 })

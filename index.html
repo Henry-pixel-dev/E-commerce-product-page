@@ -16,14 +16,14 @@
 </head>
 <body class="font-kumbh-sans bg-pale-orange">
 
-  <div id="lightBox" class="hidden fixed inset-0 bg-black/75  z-25 ">
-    <div class="h-full flex flex-col items-center justify-center">
+  <div id="lightBox" class="hidden fixed inset-0 bg-black/75  z-25 h-full">
+    <div class="flex flex-col items-center justify-center">
       <div class="relative  py-6  flex flex-col items-center gap-4 rounded-lg ">
-        <button id="closeLightBox" type="button" class="absolute top-0 right-0" aria-label="Close modal">
+        <button id="closeLightBox" type="button" class="absolute top-4 right-0" aria-label="Close modal">
           <img src="images/icon-close.svg" alt="" class="w-4 h-4">
         </button>
         <div class="relative p-4  rounded-lg">
-          <img id="lightBoxImage" src="images/image-product-1.jpg" alt="" class="w-128 h-128 object-cover rounded-lg z-10">
+          <img id="lightBoxImage" src="images/image-product-1.jpg" alt="" class="w-100 h-100 object-cover rounded-lg z-10">
 
           <button id="lightPreviouBtn" class="absolute top-1/2 left-0 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer  z-24" aria-label="Previous image">
           <img src="images/icon-previous.svg" alt="Previous Icon" class="cursor-pointer">
@@ -34,7 +34,7 @@
         </button>
         </div>
 
-        <div class="flex flex-row justify-center items-center space-x-4">
+        <div class="flex-2 flex flex-row justify-center items-center space-x-4">
           <img id="lightProduct1" src="images/image-product-1-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer border-2 border-orange-300 hover:opacity-50">
           <img id="lightProduct2" src="images/image-product-2-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
           <img id="lightProduct3" src="images/image-product-3-thumbnail.jpg" alt="" class="w-16 h-16 rounded-lg cursor-pointer hover:border-2 hover:border-orange-300 hover:opacity-50">
@@ -57,10 +57,10 @@
       </div>
     </div>
     <div class="flex flex-row items-center gap-4">
-      <div class="relative cursor-pointer">
+      <button id="cart" class="relative cursor-pointer">
         <img src="images/icon-cart.svg" alt="Cart Icon">
         <div class="absolute -top-2 -right-2 bg-orange text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">3</div>
-      </div>
+      </button>
       <img src="images/image-avatar.png" alt="User Avatar" class="w-8 h-8 rounded-full hover:border-2 hover:border-orange-300 cursor-pointer">
     </div>
   </header>
@@ -85,7 +85,7 @@
         <button id="nextBtn" class="absolute top-1/2 right-4 w-10 h-10 flex items-center justify-center px-4 bg-white bg-opacity-50 rounded-full cursor-pointer md:hidden">
           <img src="images/icon-next.svg" alt="Next Icon" class="cursor-pointer">
         </button>
-        <div id="cartDisplay" class="hidden bg-pale-orange absolute top-2 left-2 right-2 bottom-4   rounded-lg md:left-auto md:bottom-auto md:top-10 md:right-4 md:max-w-[352px] md:max-h-[232px] md:shadow-lg">
+        <div id="cartDisplay" class="hidden bg-pale-orange absolute top-2 left-2 right-2 bottom-4   rounded-lg md:left-auto md:bottom-auto md:top-10 md:right-4 md:max-w-[352px] md:min-w md:max-h-[232px] md:min-h-[232px] md:shadow-lg">
           <p class="w-full shadow p-6">
             Cart
           </p>
@@ -93,7 +93,7 @@
             <img id="cartImage" src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" class="w-12 h-12 rounded-lg">
             <div class="flex flex-col gap-1">
               <p class="text-sm text-dark-grayish-blue">Fall Limited Edition Sneakers</p>
-              <p class="text-sm text-dark-grayish-blue"><span class="font-bold text-very-grayish-blue">$125.00</span> x 3 <span class="font-bold text-very-dark-blue ">$250.00</span></p>
+              <p class="text-sm text-dark-grayish-blue"><span class="font-bold text-very-grayish-blue">$125.00</span> x <span id="calDisplay2">3</span> <span id="currentPriceDisplay" class="font-bold text-very-dark-blue ">$250.00</span></p>
             </div>
             <button id="cartDeleteBtn"aria-label="Remove item from cart">
               <img src="images/icon-delete.svg" alt="Delete Icon" class="w-4 h-4 cursor-pointer">
